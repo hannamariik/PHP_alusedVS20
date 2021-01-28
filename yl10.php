@@ -21,13 +21,12 @@
 
 if(!empty($_GET['leht'])){
     $leht = htmlspecialchars($_GET['leht']);
-    $lubatud = array('leht1','leht2','leht3', 'leht4');
-    $kontroll = in_array($leht, $lubatud);
-    if($kontroll==true){
+    if(is_file($leht.'.php')){
         include($leht.'.php');
-    } else {
-        echo 'Lehte ei eksisteeri';
+    }else {
+        echo "Lehte ei eksisteeri";
     }
+
 }
 ?>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
