@@ -11,7 +11,7 @@
 <?php
 $break = "<br>";
 
-echo '<form action="9.php" method="get">
+echo '<form action="yl9.php" method="get">
         <label for="nimi">Nimi </label>
         <input type="text" name="nimi" id="nimi"><br>
         <input type="submit" value="Saada">
