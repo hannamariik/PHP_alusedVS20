@@ -17,7 +17,7 @@ function tervitus(){
 echo tervitus().$break.$break;
 
 function uudis() {
-    echo '<form action="7.php" method="get">
+    echo '<form action="yl7.php" method="get">
         <label for="kiri">Liitu uudiskirjaga </label>
         <input type="text" name="uudis" id="uudis" ><br>
         <input type="submit" value="Saada">
@@ -38,7 +38,7 @@ error_reporting( 0);
 
 echo kasutaja(kriisa);
 
-echo '<form action="7.php" method="get">
+echo '<form action="yl7.php" method="get">
         <label for="arv1">I arv </label>
         <input type="number" name="arv1" id="arv1" ><br>
         <label for="arv2">II arv </label>
@@ -63,7 +63,7 @@ function jada($arv1,$arv2,$arv3) {
 echo arvud($arv1,$arv2,$arv3);
 
 
-echo '<form action="7.php" method="get">
+echo '<form action="yl7.php" method="get">
         <label for="arva">Arv A </label>
         <input type="arva" name="arva" id="arva" ><br>
         <label for="arvb">Arv B </label>
@@ -81,7 +81,7 @@ function pindala($alus, $korgus) {
 
 echo Vastus($arva,$arvb);
 
-echo '<form action="7.php" method="get">
+echo '<form action="yl7.php" method="get">
         <label for="isikkood">Isikukood </label>
         <input type="isikkood" name="isikkood" id="isikkood" ><br>
         
@@ -121,13 +121,8 @@ function heamote() {
 
 }
 echo heamote();
-
-
 ?>
-
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
 </body>
 </html>
