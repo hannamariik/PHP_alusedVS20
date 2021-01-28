@@ -1,32 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kriisa</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
 </head>
-<body class="container">
+    
+<body>
 <?php
 $break = "<br>";
-$gurls = array('Liisa', 'Piret', 'Silvia', 'Siim', 'Kati', 'Mia', 'Leida', 'Mari');
-// sordib ja valjastab tudrukud
+$tudrukud = array('Liisa', 'Piret', 'Silvia', 'Siim', 'Kati', 'Mia', 'Leida', 'Mari');
 echo "Tüdrukud: ".$break;
-sort($gurls);
-echo '<pre>'; print_r($gurls); echo '</pre>';
-//v'ljastab esimesed kolm ja viimase
-echo 'Esimesed kolm: '.'<br>'.$gurls[0].$break.$gurls[1].$break.$gurls[2];
-echo $break.'Viimane: '.end($gurls).$break;
-// teeb suvalise nr ja valjastab suva tudruku
-$nr = rand(0,count($gurls)-1);
+sort($tydrukud);
+echo '<pre>'; print_r($tydrukud); echo '</pre>';
+echo 'Esimesed kolm: '.'<br>'.$tydrukud[0].$break.$tydrukud[1].$break.$tydrukud[2];
+echo $break.'Viimane: '.end($tydrukud).$break;
+$nr = rand(0,count($tydrukud)-1);
 
-echo 'Suvaline: '.$gurls[$nr].$break;
-
-// teen massiivid
+echo 'Suvaline: '.$tydrukud[$nr].;
+    
 $autod = array("Subaru","BMW","Acura","Mercedes-Benz","Lexus","GMC","Volvo","Toyota","Volkswagen","Volkswagen","GMC","Jeep","Saab","Hyundai","Subaru","Mercedes-Benz",
     "Honda","Kia","Mercedes-Benz","Chevrolet","Chevrolet","Porsche","Buick","Dodge","GMC","Dodge","Nissan","Dodge","Jaguar","Ford","Honda","Toyota","Jeep",
     "Kia","Buick","Chevrolet","Subaru","Chevrolet","Chevrolet","Pontiac","Maybach","Chevrolet","Plymouth","Dodge","Nissan","Porsche","Nissan","Mercedes-Benz",
@@ -55,11 +45,11 @@ echo $break."Autod: ".$break;
 echo $break.'Autode arv: '.count($autod).$break;
 
 if (count($autod)==count($vin)) {
-    echo "Massiivid on ühepikkused.".$break;
+    echo "VIN on õige".$break;
 } else {
-    echo "Massiivid ei ole ühepikkused.".$break;
+    echo "VIN on pikem/lühem".$break;
 }
-// Loendan audisid ja toyotasid
+
 $audid = 0;
 $toyotad = 0;
 for($x=0; $x<=count($autod)-1;$x ++) {
@@ -73,9 +63,7 @@ for($x=0; $x<=count($autod)-1;$x ++) {
 }
 echo "Audisid on: ".$audid.$break;
 echo "Toyotasid on: ".$toyotad.$break;
-
-// vin kus on vahem kui 17 marki
-echo "Vähem kui 17 märki vin koodis: ".$break;
+echo "VIN on lühike ".$break;
 for($y = 0;$y<=count($vin)-1;$y ++) {
     if (strlen($vin[$y])<17) {
         echo $vin[$y].$break;
@@ -83,8 +71,6 @@ for($y = 0;$y<=count($vin)-1;$y ++) {
         continue;
     }
 }
-
-// kesk. palgad
 
 $palgad = array(1220,1213,1295,1312,1298,1354,1296,1286,1292,1327,1369,1455
 );
@@ -97,7 +83,6 @@ echo $break."Palk: ".$break;
 
 echo "Keskmine palk aastal 2018: ".$sum/count($palgad).$break;
 
-// firma
 echo $break."Firmad: ".$break;
 
 $firmad = array("Kimia","Mynte","Voomm","Twiyo","Layo","Talane","Gigashots","Tagchat","Quaxo","Voonyx","Kwilith","Edgepulse","Eidel","Eadel","Jaloo","Oyope","Jamia");
@@ -127,7 +112,7 @@ if (isset($_GET['firma']) or isset($_GET['firma'])) {
 
 
     }}
-//Riigid
+
 $riigid = array("Indonesia","Canada","Kyrgyzstan","Germany","Philippines",
     "Philippines","Canada","Philippines","South Sudan","Brazil",
     "Democratic Republic of the Congo","Indonesia","Syria","Sweden",
@@ -145,7 +130,6 @@ for($r=0; $r<=count($riigid)-1; $r ++) {
 }
 echo "Kõige pikema nimega riik on: ".$pikim. ". Selles on ".strlen($pikim)." märki.".$break;
 
-//hiina
 echo $break."Hiina: ".$break;
 
 $hiina = array("瀚聪","月松","雨萌","展博","雪丽","哲恒","慧妍","博裕","宸瑜","奕漳",
@@ -162,9 +146,6 @@ echo $break.$break."Google: ".$break;
     <input type="submit" class="button" value="Otsi">
 </form>
 <?php
-
-//google
-
 
 $google = array("Feake","Bradwell","Dreger","Bloggett","Lambole","Daish","Lippiett","
 Blackie","Stollenbeck","Houseago","Dugall","Sprowson","Kitley","Mcenamin",
@@ -195,7 +176,7 @@ for ($r=0; $r<=count($google)-1; $r ++) {
 
 
 <?php
-// Pildid
+
 echo $break."Pildid: ".$break;
 
 $pildid = array("prentice.jpg","freeland.jpg","peterus.jpg","devlin.jpg","gabriel.jpg","pete.jpg");
@@ -238,16 +219,5 @@ $pildid = array("prentice.jpg","freeland.jpg","peterus.jpg","devlin.jpg","gabrie
 
 
 </div>
-
-
-
-
-
-
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-
 </body>
 </html>
