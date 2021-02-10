@@ -6,12 +6,10 @@
 </head>
 <body>
     <ul>
-    <li><a href="yl10.php">Avaleht</a></li>
-    <li><a href="yl10.php?leht=leht1">Link1</a></li>
-    <li><a href="yl10.php?leht=leht2">Link2</a></li>
-    <li><a href="yl10.php?leht=leht3">Link3</a></li>
-    <li><a href="yl10.php?leht=leht4">Link4</a></li>
-    <li><a href="yl10.php?leht=leht5">Link5</a></li>
+    <li><a href="avaleht.php">Avaleht</a></li>
+    <li><a href="leht1.php?leht=leht1">Link1</a></li>
+    <li><a href="leht2.php?leht=leht2">Link2</a></li>
+    <li><a href="leht3.php?leht=leht3">Link3</a></li>
     </ul>
 <?php
 
