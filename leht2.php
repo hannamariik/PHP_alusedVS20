@@ -1,5 +1,10 @@
-<?php
-<h1>Leht2</h1>
-<br><br>
-<p> LoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsum </p> 
-?>
+<html>
+  <head>
+    <title>leht2</title>
+  </head>
+  
+<body>
+  <h1>Leht1</h1>
+  <p> LoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsum </p> 
+</body>
+</html>
